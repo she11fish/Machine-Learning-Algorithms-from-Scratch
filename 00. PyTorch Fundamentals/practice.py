@@ -1,0 +1,35 @@
+import torch
+
+# torch.random.manual_seed(1234)
+# # torch.cuda.manual_seed(1234)
+# tensor1 = torch.rand(7, 7)
+# torch.random.manual_seed(1234)
+# # torch.cuda.manual_seed(1234)
+# tensor2 = torch.rand(1, 7)
+# torch.random.manual_seed(1234)
+# # torch.cuda.manual_seed(1234)
+# tensor2_transposed = tensor2.transpose(0, 1)
+# tensor3 = tensor1.matmul(tensor2_transposed)
+# print(tensor3, tensor3.size())
+# torch.random.manual_seed(1234)
+# torch.random.manual_seed(1234)
+# tensor1 = torch.rand(2, 3) 
+# tensor2 = torch.rand(2, 3)
+
+# print(tensor1)
+# print(tensor2)
+# multiplicationFTW = tensor1 @ (tensor2.transpose(0, 1))
+# print(multiplicationFTW)
+# print(multiplicationFTW.max())
+# print(multiplicationFTW.min())
+# print(multiplicationFTW.argmax())
+# print(multiplicationFTW.argmin())
+
+torch.manual_seed(7)
+tensor1 = torch.rand(1, 1, 1, 10)
+torch.manual_seed(7)
+
+tensor2 = torch.squeeze(tensor1, (0, 1, 2))
+
+# print(tensor1, tensor1.size())
+print(tensor2, tensor2.size())
